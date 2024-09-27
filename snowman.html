@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snowman</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: red;
+      margin: 0;
+    }
+
+    .snowman {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Snowman parts */
+    .body-large,
+    .body-middle,
+    .body-small {
+      background-color: white;
+      border: 3px solid #ccc;
+      border-radius: 50%;
+    }
+
+    .body-large {
+      width: 150px;
+      height: 150px;
+    }
+
+    .body-middle {
+      width: 100px;
+      height: 100px;
+      margin-top: -20px;
+    }
+
+    .body-small {
+      width: 60px;
+      height: 60px;
+      margin-top: -20px;
+    }
+
+    /* Snowman eyes */
+    .eye {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 30%;
+    }
+
+    .eye.left {
+      left: 35%;
+    }
+
+    .eye.right {
+      right: 35%;
+    }
+
+    /* Snowman buttons */
+    .button {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .button.one {
+      top: 45%;
+    }
+
+    .button.two {
+      top: 60%;
+    }
+
+    .button.three {
+      top: 75%;
+    }
+
+    /* Snowman hat */
+    .hat {
+      width: 80px;
+      height: 50px;
+      background-color: black;
+      position: absolute;
+      top: -60px;
+      border-radius: 10% 10% 0 0;
+    }
+
+    .hat-brim {
+      width: 100px;
+      height: 10px;
+      background-color: black;
+      position: absolute;
+      top: -10px;
+      border-radius: 5px;
+    }
+
+    /* Snowman nose */
+    .nose {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 15px solid orange;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="snowman">
+    <!-- Head and body -->
+    <div class="body-small">
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose"></div>
+      <div class="hat"></div>
+      <div class="hat-brim"></div>
+    </div>
+    <div class="body-middle">
+      <div class="button one"></div>
+      <div class="button two"></div>
+    </div>
+    <div class="body-large">
+      <div class="button three"></div>
+    </div>
+  </div>
+
+</body>
+</html>

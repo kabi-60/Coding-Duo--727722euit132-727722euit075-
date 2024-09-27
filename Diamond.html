@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond</title>
+  <style>
+    .diamond-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #d9e70c;
+    }
+
+    .diamond {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      position: relative;
+      transform: rotate(45deg);
+    }
+
+    .diamond::before {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      transform: rotate(-90deg);
+    }
+
+    .diamond-text {
+      position: absolute;
+      transform: rotate(-45deg);
+      text-align: center;
+      width: 100%;
+      color: black;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 18px;
+      top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="diamond-container">
+    <div class="diamond">
+      <div class="diamond-text"></div>
+    </div>
+  </div>
+</body>
+
+</html>
